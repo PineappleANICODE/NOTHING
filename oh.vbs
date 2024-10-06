@@ -7,7 +7,7 @@ Set WSHShell=Wscript.CreateObject("Wscript.Shell")
 
 Dim x
 For x = 1 to 10
-  WSHShell.Run "why.html"
+  WSHShell.Run("oh.vbs")
 Next
 
 
