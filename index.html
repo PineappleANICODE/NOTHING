@@ -41,18 +41,6 @@ function myFunction() {
   var NAME = document.getElementById("NAME").value;
   var text;
 
-var audio = document.getElementById("audio");
- var promise = audio.play();
-
- 
-if (promise !== undefined) {
-  promise.then(_ => {
-    // Autoplay started!
-  }).catch(error => {
-    alert("Please enable audio autoplay for full experience!");
-
-  });
-}
   if (NAME === "searcher") {
     text = "Not yet...";
     
@@ -80,7 +68,19 @@ if (promise !== undefined) {
   }
   document.getElementById("demo").innerHTML = text;
 }
-  
+
+var audio = document.getElementById("audio");
+ var promise = audio.play();
+
+ 
+if (promise !== undefined) {
+  promise.then(_ => {
+    // Autoplay started!
+  }).catch(error => {
+    alert("Please enable audio autoplay for full experience!");
+
+  });
+}
 </script>
 <style>
 
