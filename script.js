@@ -1,10 +1,3 @@
-<body style="background: url(https://mtviewmirror.com/wp-content/uploads/2015/11/nothingFTadtext.jpg) no-repeat center center fixed; background-size: cover;">
-
-
-<h1 id="text"></h1>
-<div class="list-item"> <div id="div1" style="visibility:hidden;">
-<a href="Sorry!!.txt"><span class="list-item-note"><s1>Y/N</s1></span></a>
-<script>
 setTimeout(function(){
 document.getElementById('div1').style.visibility = "visible";
 },42000);
@@ -40,4 +33,3 @@ window.onload = function(){
     this.hidden=true;
     glitch();
 };
-</script>
