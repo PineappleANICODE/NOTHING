@@ -1,6 +1,3 @@
-This file is coming soon. I'm having file size issues and virus-detection problems at the minute. If you have pygame installed and would like to run it yourself, the code is below. [The arg is not finished yet! You may not be able to use the info from this code for anything yet]
-
-
 import pygame
 import time
 BLACK= (0,0,0)
