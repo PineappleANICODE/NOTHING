@@ -36,7 +36,7 @@ while exit==True:
         pygame.quit()
         exit = False
 if y==True:
-    write("Well done. Acceptance is the first key.",0,0,screen)
+    write("Well done. to ACCEPT is the first key.",0,0,screen)
     time.sleep(5)
 if e==True:
     pygame.quit()
