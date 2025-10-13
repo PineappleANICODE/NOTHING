@@ -1,0 +1,109 @@
+<div id = "header"><h1><p>T</p><p>H</p><p>E</p><p>&ensp;C</p><p>O</p><p>U</p><p>N</p><p>C</p><p>I</p><p>L&ensp;</p><p>H</p><p>A</p><p>V</p><p>E</p><p>&ensp;D</p><p>E</p><p>E</p><p>M</p><p>E</p><p>D</p><p>&ensp;Y</p><p>O</p><p>U&ensp;</p><p>U</p><p>N</p><p>W</p><p>O</p><p>R</p><p>T</p><p>H</p><p>Y</p></h1></div>
+<div id="main"onclick="wipe()";>Searcher... they will judge you for what you've done. Your only chance is to find the keys. Maybe then, they will forgive.</div>
+<div id = "wiped"><u>HIGH COUNCIL APPEAL BOARD</u><br><br>
+please contact highcouncilappeals@hotmail.com with the following format to be considered for a formal appeal in the case of a "henious act" under the FA act of 3000BC: <br><br>
+Subject: Heinous act appeal<br><br>
+{legal human name} {learned name}<br><br>
+{first key},{second key},{third key}
+<br><br>
+{reason as to which you have changed and/or an improper judgement was made in regards to your henious act}
+</div>
+
+<style>
+  #header p{
+  visibility:visible;
+  top: 10px;
+  display:inline-block;
+  position: relative;
+  color: rgb(255, 255, 255);
+  transition: 8s;
+ 
+}
+#header p:hover{
+  display:inline-block;
+  color: black;
+  transition: 0.4s;
+}
+#main{
+  visibility: hidden;
+  top: -50px;
+  font-size: 10px;
+  position: absolute;
+  transition: 4s;
+}
+@-webkit-keyframes shake {
+    0% { -webkit-transform: translate(2px, 1px) rotate(0deg); } 
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-0.2deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(0.1deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(0.5deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(2px, 1px) rotate(-0.1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(0.3deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-0.2deg); }
+}
+#main:hover {
+    -webkit-animation-name: shake;
+    -webkit-animation-duration: 0.5s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: infinite;
+}
+#wiped{
+  visibility: hidden;
+  color: white;
+  top: 0px;
+  position: absolute;
+   transition: 4s;
+}
+
+</style>
+<script>
+  var paragraphs = document.getElementsByTagName("p");
+var count = 0;
+document.addEventListener("transitionstart", () => {
+  count++;
+});
+
+var check = 0;
+var paragraphs = document.getElementsByTagName("p");
+
+if (check==0){
+document.onmousemove = function(){
+
+  if (count>150 && check==0){
+    for(var i = 0; i < paragraphs.length; i++){
+    paragraphs[i].style.color="black";
+    setTimeout(function() {fall()}, 5000);
+    check = 1;
+    }
+  }
+}
+};
+
+function fall(){
+    document.getElementById("main").style.visibility="visible";
+    document.getElementById("main").style.top= "100px";
+    for(var i = 0; i < paragraphs.length; i++){
+      paragraphs[i].style.transition="3s";
+      paragraphs[i].style.top = Math.floor((Math.random() * 500)+100)+"px";
+      paragraphs[i].style.color="white";
+      }
+    setTimeout(function() {
+      for(var i = 0; i < paragraphs.length; i++){
+      paragraphs[i].style.visibility="hidden";
+      }
+      
+      }, 1000);
+}
+
+function wipe(){
+document.getElementById("main").style.color="white";
+      document.getElementById("main").style.visibility="hidden";
+      document.getElementById("wiped").style.visibility ="visible";
+      document.getElementById("wiped").style.color ="black";
+
+
+}
+</script>
