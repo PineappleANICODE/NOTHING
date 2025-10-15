@@ -102,7 +102,7 @@ what is your mother's maiden name?
   top: 0px;
 
   opacity: 0%;
-  transition: 1s;
+  transition: 0s;
 }
 #popupheader{
   width: 100%;
@@ -118,6 +118,7 @@ function crossed(){
   document.getElementById("box").style.backgroundColor = "grey"
     document.getElementsByTagName('p')[0].innerHTML = "Please click to prove you are a human"
     if (count > 3){
+            document.getElementById("popup").style.transition = "1s";
       document.getElementById("popup").style.opacity = "100%";
       document.getElementById("main").innerHTML = "HOW TRAGIC. THE ANGEL OF LIFE WAS NEVER REALLY GIVEN A CHANCE TO LIVE.";
     }
