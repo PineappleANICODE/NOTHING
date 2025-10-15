@@ -1,1 +1,150 @@
-ccoming soon
+<div id = "img"><img src="binary.png"></div>
+<div id = "main">
+<div id="box"onclick ="crossed()"></div>
+<p>Please click to prove you are a human</p></div>
+<div id = "popup">PLEASE COMPLETE TO PROVE YOU'RE A HUMAN<br>
+what is your mother's maiden name?
+
+
+        <ul class="choices">
+            <li>
+                <label><input type="radio" name="question0" value="A" /><span>Smith</span></label>
+            </li>
+            <li>
+                <label><input type="radio" name="question0" value="B" /><span>Johnson</span></label>
+            </li>
+            <li>
+                <label><input type="radio" name="question0" value="C" /><span>Llewellyn</span></label>
+            </li>
+            <li>
+                <label><input type="radio" name="question0" value="D" /><span>I don't remember</span></label>
+            </li>
+        </ul>
+
+        Where were you born?
+        <ul class="choices">
+            <li>
+                <label><input type="radio" name="question1" value="A" /><span>1980AD</span></label>
+            </li>
+            <li>
+                <label><input type="radio" name="question1" value="B" /><span>1998AD</span></label>
+            </li>
+            <li>
+                <label><input type="radio" name="question1" value="C" /><span>2005AD</span></label>
+            </li>
+            <li>
+                <label><input type="radio" name="question1" value="D" /><span>I was never told</span></label>
+            </li>
+        </ul>
+
+        Do you have a true sense of self-identity and worth correlating to your status as a human? Or have you always felt as though you were a seperate species to your peers?
+                <ul class="choices">
+            <li>
+                <label><input type="radio" name="question2" value="A" /><span>Yes, I have a solid identity as a human</span></label>
+            </li>
+            <li>
+                <label><input type="radio" name="question2" value="B" /><span>I mostly have a solid identity as a human</span></label>
+            </li>
+            <li>
+                <label><input type="radio" name="question2" value="C" /><span>I partially have a solid identity as a human</span></label>
+            </li>
+            <li>
+                <label><input type="radio" name="question2" value="D" /><span>I have no solid identity as a human</span></label>
+            </li>
+        </ul>
+        <button class="view-results" onclick="quiz()">View Results</button>
+    </li></div>
+
+    <script>
+
+  var count = 0;
+function crossed(){
+
+  count = count +1
+  document.getElementById("box").style.backgroundColor = "grey"
+    document.getElementsByTagName('p')[0].innerHTML = "Please click to prove you are a human"
+    if (count > 3){
+      document.getElementById("popup").style.opacity = "100%";
+    }
+  setTimeout(function(){document.getElementById("box").style.backgroundColor = "rgba(0,0,0,0.0)";   document.getElementsByTagName('p')[0].innerHTML = "Please click to prove you are a human <br> ERROR: NOT HUMAN"},1000)
+
+}
+
+function quiz(){
+  var count = 0;
+  console.log("uwuwuw");
+
+const quests = [];
+quests.push(document.getElementsByName('question0'), document.getElementsByName('question1'), document.getElementsByName('question2'));
+for (var x = 0; x< quests.length; x++){
+  for (var y = 0; y < quests[x].length; y++){
+      if (quests[x][y].checked){
+        if(quests[x][y].value == "D"){
+          count = count+1;
+
+        }
+      };
+}
+}
+if (count==3){
+    document.getElementById("popup").style.transition = "0s";
+  document.getElementById("main").style.transition = "0s";
+  document.getElementById("popup").style.opacity = "0%";
+  document.getElementById("main").style.opacity = "0%";
+   document.getElementById("img").style.opacity = "100%";
+   setTimeout(function(){  document.getElementById("img").style.opacity = "0%"},1000);
+      setTimeout(function(){  document.getElementById("img").style.opacity = "100%"},1900);
+   setTimeout(function(){  document.getElementById("img").style.opacity = "0%"},2100);
+      setTimeout(function(){  document.getElementById("img").style.opacity = "100%"},2200);
+}
+}
+</script>
+<style>
+body{
+  background-color: black;
+}
+
+#img{
+
+  opacity: 0%;
+  left: 33%;
+  position: absolute;
+}
+#main{
+  width: 30%;
+  max-width: 600px;
+  height: 70px;
+  position: absolute;
+  left: 35%;
+  text-align: right;
+  background-color: aliceblue;
+  border-radius: 10%;
+  padding: 10px;
+   opacity: 100%;
+}
+
+
+
+#box{
+  position: absolute;
+  top: 20%;
+  height: 40px;
+  width: 40px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: black;
+  transition: 0.1s;
+}
+#popup{
+  position: fixed;
+  background-color: aquamarine;
+   box-shadow: 10px 10px 5px ;
+  width: 500px;
+  height: 500px;
+  left: 40%;
+  top: 50px;
+
+  opacity: 0%;
+  transition: 1s;
+}
+</style>
