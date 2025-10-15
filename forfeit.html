@@ -64,6 +64,7 @@ function crossed(){
   document.getElementById("box").style.backgroundColor = "grey"
     document.getElementsByTagName('p')[0].innerHTML = "Please click to prove you are a human"
     if (count > 3){
+            document.getElementById("popup").style.transition = "1s";
       document.getElementById("popup").style.opacity = "100%";
     }
   setTimeout(function(){document.getElementById("box").style.backgroundColor = "rgba(0,0,0,0.0)";   document.getElementsByTagName('p')[0].innerHTML = "Please click to prove you are a human <br> ERROR: NOT HUMAN"},1000)
@@ -145,6 +146,6 @@ body{
   top: 50px;
 
   opacity: 0%;
-  transition: 1s;
+  transition: 0s;
 }
 </style>
