@@ -31,7 +31,7 @@ while exit==True:
         exit= False
         y=True
     if keys[pygame.K_n]:
-        write("You will never succeed",0,0,screen)
+        write("You will never succeed. Just FORFEIT already.",0,0,screen)
         time.sleep(2)
         pygame.quit()
         exit = False
