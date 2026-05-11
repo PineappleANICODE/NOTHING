@@ -1,9 +1,12 @@
 
 
 <body style="background-color: rgb(000 000 000);">
+<audio controls loop id="audio">
+  <source src="main.mp3" type="audio/mpeg">
+</audio>
+    
 
-
-<section id="a searcher's reward" class="inactive" style="display: none;" NO PLEASE, WAIT! </p></section>
+<section id="that night" class="inactive" style="display: none;"> NO PLEASE, WAIT! SLOW DOWN!</p></section>
 
 <br><br><br><br><div align="center"><font color="red"><s>Some angels are trying to help them?! What a waste of time</s>
 <br><div align="center"><font color="red"><s>I know... it's not like they're going to succeed.</s>
@@ -20,3 +23,22 @@
   <area shape="rect" coords="50,212,193,300" alt="hoof" href="offshoot-1.html">
   <area shape="rect" coords="170,152,373,230" alt="stomach" href="offshoot-2.html">
 </map>
+
+  <script>
+var audio = document.getElementById("audio");
+ var promise = audio.play();
+    if (promise !== undefined) {
+  promise.then(_ => {
+    // Autoplay started!
+  }).catch(error => {
+    alert("Please enable audio autoplay for full experience!");
+
+  });
+}  
+  </script>
+  
+<style>
+  #audio{
+  visibility: hidden;
+}
+</style>
