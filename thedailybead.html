@@ -1,3 +1,6 @@
+<audio controls loop id="audio">
+  <source src="news.mp3" type="audio/mpeg">
+</audio>
 <div id = "header">
 <h1><u>The Daily Bread</u></h1>
 <marquee>BREAKING NEWS: CONVICT FROM THE CUDDIOBOROUGH CASE HAS DISSAPEARED</marquee></div>
@@ -56,11 +59,27 @@ body{
   left: 40%;
 
 }
+  #news{
+    visibility: hidden;
+  }
 </style>
 
 <script>
   function popups(){
 document.getElementById("popup").style.display = "block"
 setTimeout(function() {document.getElementById("popup2").style.display = "block";}, 1000);
+}
+
+  var audio = document.getElementById("audio");
+ var promise = audio.play();
+
+ 
+if (promise !== undefined) {
+  promise.then(_ => {
+    // Autoplay started!
+  }).catch(error => {
+    alert("Please enable audio autoplay for full experience!");
+
+  });
 }
 </script>
