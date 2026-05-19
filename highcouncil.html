@@ -1,3 +1,6 @@
+<audio controls loop id="audio">
+  <source src="main.mp3" type="audio/mpeg">
+</audio>
 <div id = "header"><h1><p>T</p><p>H</p><p>E</p><p>&ensp;C</p><p>O</p><p>U</p><p>N</p><p>C</p><p>I</p><p>L&ensp;</p><p>H</p><p>A</p><p>V</p><p>E</p><p>&ensp;D</p><p>E</p><p>E</p><p>M</p><p>E</p><p>D</p><p>&ensp;Y</p><p>O</p><p>U&ensp;</p><p>U</p><p>N</p><p>W</p><p>O</p><p>R</p><p>T</p><p>H</p><p>Y</p></h1></div>
 <div id="main"onclick="wipe()";>Searcher... they will judge you for what you've done. Your only chance is to find the keys. Maybe then, they will forgive.</div>
 <div id = "wiped"><u>HIGH COUNCIL APPEAL BOARD</u><br><br>
@@ -101,6 +104,19 @@ function fall(){
 }
 
 function wipe(){
+  
+  var audio = document.getElementById("audio");
+ var promise = audio.play();
+
+ 
+if (promise !== undefined) {
+  promise.then(_ => {
+    // Autoplay started!
+  }).catch(error => {
+    alert("Please enable audio autoplay for full experience!");
+
+  });
+}
 document.getElementById("main").style.color="white";
       document.getElementById("main").style.visibility="hidden";
       document.getElementById("wiped").style.visibility ="visible";
