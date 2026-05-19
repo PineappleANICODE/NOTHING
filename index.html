@@ -96,7 +96,7 @@ if (promise !== undefined) {
   });
 }
 
-count = 0
+count = 100
 
 function errors(){
 audio.play();
@@ -105,8 +105,12 @@ if (document.getElementById("bg").clientHeight < (window.innerHeight+Math.trunc(
       srcs= "glitch"+Math.floor(Math.random() * 4)+".png";
       img.src = srcs;
       img.style.height = "200px";
+      img.style.filter = "brightness("+count+"%)";
       document.getElementById("bg").appendChild(img);
+      
       audio.currentTime = audio.currentTime-0.4;
+      
+      if (count > 2){count=count-1;}
 
   }
 }
