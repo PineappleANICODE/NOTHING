@@ -1,5 +1,7 @@
-<title>   </title>
-
+<title>NOTHING</title>
+<div id ="gradient">hello</div>
+<div id ="gradientleft">searcher</div>
+<div id ="gradientright">hru?</div>
 
 <body style="background-image: url(BG.gif);background-color: rgb(126 255 180);">
 
@@ -91,6 +93,59 @@ if (promise !== undefined) {
 
 #audio{
   visibility: hidden;
+}
+
+
+ body{
+  overflow-x: hidden;
+  height: 100%;
+}
+#gradient{
+  top: -20px;
+  width: 100%;
+  position: absolute;
+  box-shadow: 0px 10px 25px black;
+  animation-duration: 1.5s;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#gradientleft{
+  left: -54px;
+  min-height: 100%;
+  position: absolute;
+  box-shadow: 10px 0px 25px black;
+  animation-duration: 1.5s;
+  animation-name: pulse2;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#gradientright{
+  right: -30px;
+  height: 100%;
+  position: absolute;
+  box-shadow: -10px 0px 25px black;
+  animation-duration: 1.5s;
+  animation-name: pulse3;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes pulse {
+  0% {box-shadow: 0px 10px 25px black;}
+  50% {box-shadow: 0px 1px 25px black;}
+100% {box-shadow: 0px 10px 25px black;}
+}
+@keyframes pulse2 {
+  0% { box-shadow: 10px 0px 25px black;}
+  50% { box-shadow: 1px 0px 25px black;}
+  100% { box-shadow: 10px 0px 25px black;}
+}
+@keyframes pulse3 {
+  0% { box-shadow: -10px 0px 25px black;}
+  50% { box-shadow: -1px 0px 25px black;}
+  100% { box-shadow: -10px 0px 25px black;}
 }
 </style>
 
