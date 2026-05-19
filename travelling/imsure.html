@@ -1,6 +1,9 @@
 <html>
-<body>
-  
+<body style="background-image:url('shape.gif')">
+<audio controls loop id="audio">
+  <source src="../secondary.mp3" type="audio/mpeg">
+</audio>
+      
 <!--what an embarassing thing to be reduced to!-->
 <p>What's your name?<p>
 
@@ -35,5 +38,21 @@ function myFunction() {
   }
   document.getElementById("demo").innerHTML = text;
 }
+
+  var audio = document.getElementById("audio");
+ var promise = audio.play();
+    if (promise !== undefined) {
+  promise.then(_ => {
+    // Autoplay started!
+  }).catch(error => {
+    alert("Please enable audio autoplay for full experience!");
+
+  });
+}  
    
 </script>
+<style>
+  #audio{
+  visibility: hidden;
+}
+</style>
