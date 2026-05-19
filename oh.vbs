@@ -11,4 +11,6 @@ For x = 1 to 10
 Next
 
 
-MsgBox "Did you actually do it? Or are you being gaslighted? The blood drips down your face, but who's  is it?",vbSystemModal
+MsgBox "I told you you could trust me, now stop denying what you did.",vbSystemModal
+MsgBox "Who am I? Just your friendly neighbourhood Angel.",vbSystemModal
+MsgBox "Most of us don't like your lot, you know. But I think you have a chance.",vbSystemModal
