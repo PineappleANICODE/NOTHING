@@ -1,3 +1,6 @@
+<audio controls loop id="audio">
+  <source src="main.mp3" type="audio/mpeg">
+</audio>
 <div id = "img"><img src="binary.png"></div>
 <div id = "main">
 <div id="box"onclick ="crossed()"></div>
@@ -60,7 +63,9 @@ what is your mother's maiden name?
     body{
   background-color: black;
 }
-
+#audio{
+  visibility: hidden;
+}
 #img{
 
   opacity: 0%;
@@ -110,7 +115,19 @@ what is your mother's maiden name?
 }
 </style>
 <script>
-  
+  var audio = document.getElementById("audio");
+var promise = audio.play();
+
+ 
+if (promise !== undefined) {
+  promise.then(_ => {
+    // Autoplay started!
+  }).catch(error => {
+    alert("Please enable audio autoplay for full experience!");
+
+  });
+}
+        
   var count = 0;
 function crossed(){
 
