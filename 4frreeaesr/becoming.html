@@ -1,3 +1,6 @@
+<audio controls loop id="audio">
+  <source src="../murderer.mp3" type="audio/mpeg">
+</audio>
 
 
 <body style="background: url(http://cdn.wallpapersafari.com/57/77/HlC1s9.jpg) no-repeat center center fixed; background-size: cover;">
@@ -27,3 +30,23 @@
 <marquee behavior=scroll direction=down scrollamount=1 scrolldelay=12 height=593 style='position:absolute; left:50%; top:99px; width:100; height:593px;'><a href="410NotFound.html"><font>YOU WILL NEVER BE REDEEMEDa MURDERER</font></marquee></href>
 
 <div align="center" style="position:relative; bottom:1px; color:#033"><font color="white">what have i become...?</font>
+<script>
+  var audio = document.getElementById("audio");
+var promise = audio.play();
+
+ 
+if (promise !== undefined) {
+  promise.then(_ => {
+    // Autoplay started!
+  }).catch(error => {
+    alert("Please enable audio autoplay for full experience!");
+
+  });
+}
+</script>
+
+<style>
+  #audio{
+  visibility: hidden;
+}
+</style>
